@@ -1,27 +1,21 @@
 pipeline {
-       agent any
+    agent any
 
-       stages{
-           stage{'hostname'}{
-
-             steps{
-
-            sh 'hostname'
-             }
-           }
-       stage{'Server-date'}{
-
-         steps{
-            sh'date'
-         }
-       }
-
-stage{'CPU-Details'}{
-
-         steps{
-            sh'lscpu'
-         }
-       }
-
-       }
+    stages {
+        stage('System Identity') {
+            steps {
+                sh 'hostname'
+            }
+        }
+        stage('Server Date') {
+            steps {
+                sh 'date'
+            }
+        }
+        stage('CPU Details') {
+            steps {
+                sh 'lscpu'
+            }
+        }
+    }
 }
