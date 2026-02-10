@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('System Identity') {
+        stage('System Information') {
             steps {
                 sh 'hostname'
             }
         }
-        stage('Server Date') {
+        stage('Server Date Details ') {
             steps {
                 sh 'date'
             }
