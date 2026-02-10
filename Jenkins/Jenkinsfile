@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('System Information') {
+        stage('System Details') {
             steps {
                 sh 'hostname'
             }
